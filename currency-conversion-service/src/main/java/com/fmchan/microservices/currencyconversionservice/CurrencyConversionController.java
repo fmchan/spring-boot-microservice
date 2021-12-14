@@ -22,8 +22,8 @@ public class CurrencyConversionController {
 	
 	@GetMapping("/currency-converter/from/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversionBean convertCurrency(@PathVariable String from,
-			@PathVariable String to,
-			@PathVariable BigDecimal quantity
+												  @PathVariable String to,
+												  @PathVariable BigDecimal quantity
 			){
 		
 		Map<String, String> uriVariables = new HashMap<>();
@@ -32,7 +32,7 @@ public class CurrencyConversionController {
 
 		ResponseEntity<CurrencyConversionBean> responseEntity = new RestTemplate().getForEntity(
 				"http://localhost:8000/currency-exchange/from/{from}/to/{to}", 
-				CurrencyConversionBean.class, 
+				CurrencyConversionBean.class,
 				uriVariables );
 		
 		CurrencyConversionBean response = responseEntity.getBody();

@@ -16,7 +16,7 @@ public class CurrencyConversionBean {
 	}
 
 	public CurrencyConversionBean(Long id, String from, String to, BigDecimal conversionMultiple, BigDecimal quantity,
-			BigDecimal totalCalculatedAmount, int port) {
+								  BigDecimal totalCalculatedAmount, int port) {
 		super();
 		this.id = id;
 		this.from = from;
