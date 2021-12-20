@@ -1,19 +1,28 @@
-
 # fmchan Microservices
 
 ## You will learn
-- You will be able to develop and design RESTful web services
-- You will setup Centralized Microservice Configuration with Spring Cloud Config Server
-- You will understand how to implement Exception Handling, Validation, HATEOAS and filtering for RESTful Web Services.
-- You will implement client side load balancing (Ribbon), Dynamic scaling(Eureka Naming Server) and an API Gateway (Zuul)
-- You will learn to implement Distributed tracing for microservices with Spring Cloud Sleuth and Zipkin
-- You will implement Fault Tolerance for microservices with Zipkin
-- You will understand how to version your RESTful Web Services
-- You will understand how to monitor RESTful Services with Spring Boot Actuator
-- You will understand how to document RESTful Web Services with Swagger
-- You will understand the best practices in designing RESTful web services
+- Establishing Communication between Microservices
+- Centralized Microservice Configuration with Spring Cloud Config Server
 - Using Spring Cloud Bus to exchange messages about Configuration updates
 - Simplify communication with other Microservices using Feign REST Client
+- Implement client side load balancing with Ribbon
+- Implement dynamic scaling using Eureka Naming Server and Ribbon
+- Implement API Gateway with Zuul
+- Implement Distributed tracing with Spring Cloud Sleuth and Zipkin
+- Implement Fault Tolerance with Zipkin
+
+## Ports
+
+|     Application       |     Port          |
+| ------------- | ------------- |
+| Limits Service | 8080, 8081, ... |
+| Spring Cloud Config Server | 8888 |
+|  |  |
+| Currency Exchange Service | 8000, 8001, 8002, ..  |
+| Currency Conversion Service | 8100, 8101, 8102, ... |
+| Netflix Eureka Naming Server | 8761 |
+| Netflix Zuul API Gateway Server | 8765 |
+| Zipkin Distributed Tracing Server | 9411 |
 
 ### To run app with different port
 - allow "Multiple instance"
